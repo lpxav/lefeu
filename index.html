@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Papa, j’ai découvert le feu : voyage interactif en français sur l’histoire de l’énergie, du feu à l’IA." />
+  <title>Papa, j’ai découvert le feu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#accueil" aria-label="Retour à l’accueil"><span>🔥</span><strong>Papa, j’ai découvert le feu</strong></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">☰</button>
+    <nav id="mainNav" class="main-nav" aria-label="Navigation principale">
+      <a href="#accueil">Accueil</a><a href="#frise">Frise</a><a href="#chapitres">Chapitres</a><a href="#reflechis">Je réfléchis</a><a href="#ville">Ville idéale</a>
+      <button id="themeToggle" class="ghost-btn" type="button">🌙</button>
+    </nav>
+  </header>
+  <div class="progress-shell" aria-label="Progression de lecture"><span id="globalProgress"></span></div>
+  <main>
+    <section id="accueil" class="hero section-pad">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Carnet d’aventure familial · 8-14 ans</p>
+        <h1>Papa, j’ai découvert le feu</h1>
+        <p class="subtitle">Un voyage pour comprendre comment l’énergie a changé l’histoire des humains.</p>
+        <p>Avant les ampoules, les voitures, internet et l’intelligence artificielle, il y a eu une première grande découverte : le feu. Depuis, les humains n’ont jamais cessé de chercher de nouvelles façons de transformer le monde grâce à l’énergie.</p>
+        <div class="hero-actions"><button class="primary-btn" id="startBtn">Commencer l’aventure</button><button class="secondary-btn" id="resumeBtn">Reprendre l’aventure</button></div>
+        <div id="progressSummary" class="progress-card"></div>
+      </div>
+      <div class="hero-illustration reveal" aria-label="Illustration symbolique d’un enfant devant un feu">
+        <div class="energy-ribbon"><span>🪵</span><span>🌊</span><span>⚙️</span><span>🛢️</span><span>💡</span><span>☢️</span><span>🌞</span><span>🔋</span><span>🌐</span><span>🤖</span></div>
+        <div class="moon"></div><div class="child"></div><div class="campfire"><i></i><b></b></div><div class="notebook-lines"></div>
+      </div>
+    </section>
+    <section id="frise" class="section-pad"><div class="section-title"><p class="eyebrow">Frise interactive</p><h2>Choisis une étape du voyage</h2></div><div id="timeline" class="timeline"></div></section>
+    <section id="chapitres" class="section-pad"><div class="section-title"><p class="eyebrow">Carnet de chapitre</p><h2 id="chapterHeading">Chapitre</h2></div><article id="chapterView" class="chapter-card"></article></section>
+    <section id="reflechis" class="section-pad"><div class="section-title"><p class="eyebrow">Mode “Je réfléchis”</p><h2>Les grandes questions</h2><p>Ouvre une carte, lis la piste, puis discute-la avec quelqu’un.</p></div><div id="questions" class="accordion-list"></div></section>
+    <section id="ville" class="section-pad"><div class="section-title"><p class="eyebrow">Mini-jeu final</p><h2>Construis ta ville idéale</h2><p>Choisis une énergie pour chaque lieu. Observe les compromis : confort, pollution, coût, autonomie, sécurité et durabilité.</p></div><div id="cityGame" class="city-game"></div></section>
+  </main>
+  <footer class="site-footer"><p>Fait pour apprendre à comparer, questionner et choisir avec nuance. ✨</p></footer>
+  <script src="data.js"></script><script src="app.js"></script>
+</body>
+</html>
