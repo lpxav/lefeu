@@ -26,7 +26,23 @@ Ouvrez directement `index.html` dans votre navigateur.
 
 ### Avec un petit serveur local
 
-Si vous préférez servir le dossier comme un site statique :
+Si vous préférez servir le dossier comme un site statique, choisissez la commande adaptée à votre environnement.
+
+#### Windows
+
+Si `python3` affiche “Python est introuvable”, essayez d’abord le lanceur Windows :
+
+```powershell
+py -m http.server 8000
+```
+
+Si Python n’est pas installé, vous pouvez aussi utiliser Node.js :
+
+```powershell
+npx serve .
+```
+
+#### macOS / Linux
 
 ```bash
 python3 -m http.server 8000
@@ -37,6 +53,8 @@ Puis ouvrez :
 ```text
 http://localhost:8000
 ```
+
+> Astuce : le site fonctionne aussi en ouvrant directement `index.html`, car il ne dépend d’aucun backend.
 
 ## Modifier les chapitres dans le JSON
 
